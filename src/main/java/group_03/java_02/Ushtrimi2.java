@@ -40,7 +40,6 @@ public class Ushtrimi2 extends Application {
         stage.setScene(scene);
         stage.show();
     }
-
 }
 class MyCustomRect extends Pane{
     private int width;
