@@ -39,7 +39,6 @@ public class Ushtrimi2 extends Application {
         Scene scene = new Scene(pane, 500, 500);
         stage.setScene(scene);
         stage.show();
-
     }
 
 }
