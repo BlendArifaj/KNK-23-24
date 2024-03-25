@@ -71,8 +71,7 @@ class ShapeMoveXHandler implements EventHandler<ActionEvent>{
     private Shape shape;
     private int minX;
     private int maxX;
-    private int stepX;
-    private int stepY;
+    private int step;
 
     public ShapeMoveXHandler(Shape shape, int minX, int maxX){
         this.shape = shape;
