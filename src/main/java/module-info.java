@@ -25,4 +25,7 @@ module com.example.knk2324 {
     exports group_01.java_05;
     exports group_02.java_06;
     exports group_03.java_06;
+
+    exports app;
+    opens controller to javafx.fxml;
 }

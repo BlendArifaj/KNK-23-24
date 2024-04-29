@@ -14,7 +14,7 @@ public class UserRepository {
     public static boolean create(CreateUserDto userData){
         Connection conn = DBConnector.getConnection();
         String query = """
-                INSERT INTO USER 
+                INSERT INTO USER (firstName, lastName, email, salt, passwordHash)
                 VALUE (?, ?, ?, ?, ?)
                 """;
         //String query = "INSERT INTO USER VALUE (?, ?, ?, ?, ?)";
@@ -25,10 +25,10 @@ public class UserRepository {
             pst.setString(3, userData.getEmail());
             pst.setString(4, userData.getSalt());
             pst.setString(5, userData.getPasswordHash());
-            boolean inserted = pst.execute();
+            pst.execute();
             pst.close();
             conn.close();
-            return inserted;
+            return true;
         }catch (Exception e){
             return false;
         }

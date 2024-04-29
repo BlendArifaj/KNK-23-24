@@ -1,5 +1,6 @@
 package controller;
 
+import app.Navigator;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.PasswordField;
@@ -31,7 +32,7 @@ public class SignUpController {
 
         boolean response = UserService.signUp(userSignUpData);
 
-
+        Navigator.navigate(ae, Navigator.LOGIN_PAGE);
     }
 
     @FXML
