@@ -27,7 +27,7 @@ public class CreateUserController {
                 this.pwdPassword.getText(),
                 this.pwdConfirmPassword.getText()
         );
-//        boolean userCreated = UserService.createUser(user);
+        boolean userCreated = UserService.createUser(user);
     }
 
     @FXML
