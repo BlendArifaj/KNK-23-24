@@ -1,5 +1,6 @@
 package controller;
 
+import app.Navigator;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.PasswordField;
@@ -31,8 +32,8 @@ public class CreateUserController {
     }
 
     @FXML
-    private void handleClear(ActionEvent ae){
-
+    private void handleCancel(ActionEvent ae){
+        Navigator.navigate(ae, Navigator.LOGIN_PAGE);
     }
 
 }

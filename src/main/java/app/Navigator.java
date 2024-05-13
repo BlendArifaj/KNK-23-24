@@ -7,6 +7,9 @@ import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
+import java.util.Locale;
+import java.util.ResourceBundle;
+
 import java.io.IOException;
 
 public class Navigator {
@@ -33,9 +36,18 @@ public class Navigator {
         pane.getChildren().add(formPane);
     }
 
+    private void changeLanguage(){
+        Locale locale = Locale.of("sq");
+        Locale.setDefault(locale);
+    }
+
     private static Pane loadPane(String form){
+
+        ResourceBundle bundle = ResourceBundle.getBundle(
+          "translations.content", Locale.getDefault()
+        );
         FXMLLoader loader = new FXMLLoader(
-                Navigator.class.getResource(form)
+                Navigator.class.getResource(form), bundle
         );
         try {
             return loader.load();

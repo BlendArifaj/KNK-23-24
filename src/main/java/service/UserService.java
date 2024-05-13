@@ -1,11 +1,13 @@
 package service;
 
 import model.User;
-import model.dto.ChangeUserPasswordDto;
 import model.dto.CreateUserDto;
 import model.dto.LoginUserDto;
 import model.dto.UserDto;
+import model.filter.UserFilter;
 import repository.UserRepository;
+
+import java.util.List;
 
 public class UserService {
     public static boolean signUp(UserDto userData){
@@ -47,4 +49,8 @@ public class UserService {
         );
     }
 
+
+    public static List<User> filter(UserFilter filter){
+        return UserRepository.getByFilter(filter);
+    }
 }

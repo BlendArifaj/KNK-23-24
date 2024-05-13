@@ -6,15 +6,15 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
    <children>
-      <Label layoutX="151.0" layoutY="118.0" text="Email" />
-      <Label layoutX="131.0" layoutY="174.0" text="Password" />
+      <Label layoutX="151.0" layoutY="118.0" text="%lblEmail" />
+      <Label layoutX="131.0" layoutY="174.0" text="%lblPassword" />
       <TextField fx:id="txtEmail" layoutX="220.0" layoutY="114.0" />
       <PasswordField fx:id="pwdPassword" layoutX="219.0" layoutY="169.0" />
       <Button layoutX="220.0" layoutY="243.0" mnemonicParsing="false" onAction="#handleLoginClick" text="Login" />
       <Button layoutX="312.0" layoutY="243.0" mnemonicParsing="false" onAction="#handleCancelClick" text="Cancel" />
       <Label layoutX="238.0" layoutY="207.0" onMouseClicked="#handleCreateAccountClick" text="Create new account" textFill="#2f0fe4" underline="true" />
+      <Button layoutX="435.0" layoutY="30.0" mnemonicParsing="false" onAction="#handleLanguageClick" text="\%btnLanguage" />
    </children>
 </AnchorPane>

@@ -86,10 +86,10 @@
     </MenuBar>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
          <children>
-            <Label layoutX="158.0" layoutY="59.0" text="First name" />
-            <Label layoutX="158.0" layoutY="103.0" text="Last name" />
-            <Label layoutX="161.0" layoutY="149.0" text="Email" />
-            <Label layoutX="161.0" layoutY="191.0" text="Password" />
+            <Label layoutX="158.0" layoutY="59.0" text="%lblFirstName" />
+            <Label layoutX="158.0" layoutY="103.0" text="%lblLastName" />
+            <Label layoutX="161.0" layoutY="149.0" text="%lblEmail" />
+            <Label layoutX="161.0" layoutY="191.0" text="%lblPassword" />
             <Label layoutX="161.0" layoutY="237.0" text="Confirm Password" />
             <TextField fx:id="txtFirstName" layoutX="281.0" layoutY="55.0" />
             <TextField fx:id="txtLastName" layoutX="282.0" layoutY="99.0" />

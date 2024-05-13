@@ -3,11 +3,13 @@ package repository;
 import database.DatabaseUtil;
 import model.User;
 import model.dto.CreateUserDto;
+import model.filter.UserFilter;
 import service.DBConnector;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.List;
 
 public class UserRepository {
 
@@ -51,6 +53,17 @@ public class UserRepository {
             return null;
         }
     }
+
+    public static List<User> getByFilter(UserFilter filter){
+        String query = "SELECT * FROM users WHERE 1 == 1";
+        String filterQuery = filter.buildQuery();
+        query += filterQuery;
+    }
+    /*
+    SELECT * FROM users WHERE 1 == 1
+    AND user_name like l%;
+
+     */
 
     private static User getFromResultSet(ResultSet result){
         try{
